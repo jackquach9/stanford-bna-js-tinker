@@ -1,0 +1,25 @@
+.overlay {
+    position: absolute;
+    display: none;
+    background: white;
+    color: black;
+    padding: 16px;
+    border-radius: 10px;
+    width: 240px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+    z-index: 1000;
+}
+
+.overlay.show {
+    display: block;
+}
+
+.close {
+  position: absolute;
+  top: 6px;
+  right: 8px;
+  background: none;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+}

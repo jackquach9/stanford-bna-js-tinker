@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>JS Tinkering</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <h1>Javascript Tinkering</h1>
+        <img src="olympics.jpg" usemap="#workmap">
+        <map name="workmap">
+            <area shape="rect" coords="318,296,853,997" alt="Ledecky" onclick="showOverlay(event)">
+        </map>
+        <div class="overlay">
+            <h1>Katie Ledecky</h1>
+            <p>Ledecky is a swimmer, and she has won 9 gold and 14 total medals.</p>
+            <button class="close" type="button" onclick="hideOverlay()">x</button>
+        </div>
+
+        <script>
+            const overlay = document.querySelector(".overlay");
+            function showOverlay(e) {
+                overlay.style.left = `${e.pageX + 12}px`;
+                overlay.style.top  = `${e.pageY + 12}px`;
+                overlay.classList.add("show");
+            }
+
+            function hideOverlay() {
+                overlay.classList.remove("show");
+            }
+        </script>
+
+    </body>
+</html>
